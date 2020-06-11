@@ -1,0 +1,31 @@
+<testsuite failures="0" name="Karate/Demo/features/callJavaFile.feature" skipped="0" tests="2" time="1.043768">
+  <testcase classname="Karate.Demo.features.callJavaFile" name="call java method" time="0.03414">
+    <system-out>* def javaDemo = Java.type('Karate.Demo.features.JavaFunctions') .......... passed
+* def result = new javaDemo().nonstaticfunctions("World"); ................ passed
+Then print 'Result --&gt; ',result ........................................... passed
+And match result == 'Hello World' ......................................... passed
+* def result2 = javaDemo.staticfun("Static") .............................. passed
+And match result2 == 'I am Static' ........................................ passed
+* def javaDemo2 = Java.type('Karate.Demo.features.WriteData') ............. passed
+* def result3 = javaDemo2.writeData("This is third line") ................. passed</system-out>
+  </testcase>
+  <testcase classname="Karate.Demo.features.callJavaFile" name="call java method 2" time="1.009628">
+    <system-out>* def javaDemo = Java.type('Karate.Demo.features.JavaFunctions') .......... passed
+* def result = new javaDemo().nonstaticfunctions("World"); ................ passed
+Then print 'Result --&gt; ',result ........................................... passed
+And match result == 'Hello World' ......................................... passed
+* def result2 = javaDemo.staticfun("Static") .............................. passed
+And match result2 == 'I am Static' ........................................ passed
+* def javaDemo2 = Java.type('Karate.Demo.features.WriteData') ............. passed
+* def result3 = javaDemo2.writeData("This is third line") ................. passed
+Given url 'https://reqres.in/api/users?page=2' ............................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* def data = response.data ................................................ passed
+Then print 'data --&gt; ',data ............................................... passed
+* def myFun = ............................................................. passed
+* def result = call myFun data ............................................ passed
+* def javaDemo2 = Java.type('Karate.Demo.features.WriteData') ............. passed
+* def result3 = javaDemo2.writeData(result) ............................... passed</system-out>
+  </testcase>
+</testsuite>

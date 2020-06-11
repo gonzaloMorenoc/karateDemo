@@ -1,0 +1,823 @@
+10:41:59.235 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+10:41:59.355 [ForkJoinPool-1-worker-2] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+10:41:59.355 [ForkJoinPool-1-worker-3] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+10:41:59.355 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+10:42:00.416 [ForkJoinPool-1-worker-2] INFO  com.intuit.karate - [print] returnedData1 -->  Hello
+10:42:00.419 [ForkJoinPool-1-worker-3] INFO  com.intuit.karate - [print] data -->  [
+  {
+    "last_name": "Lawson",
+    "id": 7,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+    "first_name": "Michael",
+    "email": "michael.lawson@reqres.in"
+  },
+  {
+    "last_name": "Ferguson",
+    "id": 8,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+    "first_name": "Lindsay",
+    "email": "lindsay.ferguson@reqres.in"
+  },
+  {
+    "last_name": "Funke",
+    "id": 9,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+    "first_name": "Tobias",
+    "email": "tobias.funke@reqres.in"
+  },
+  {
+    "last_name": "Fields",
+    "id": 10,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+    "first_name": "Byron",
+    "email": "byron.fields@reqres.in"
+  },
+  {
+    "last_name": "Edwards",
+    "id": 11,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+    "first_name": "George",
+    "email": "george.edwards@reqres.in"
+  },
+  {
+    "last_name": "Howell",
+    "id": 12,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+    "first_name": "Rachel",
+    "email": "rachel.howell@reqres.in"
+  }
+]
+
+10:42:00.427 [ForkJoinPool-1-worker-2] INFO  com.intuit.karate - [print] returnedData2 -->  myData
+10:42:00.462 [ForkJoinPool-1-worker-3] INFO  com.intuit.karate - [print] numberOfUsers -->  {
+  "last_name": "Funke",
+  "id": 9,
+  "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+  "first_name": "Tobias",
+  "email": "tobias.funke@reqres.in"
+}
+
+10:42:00.500 [pool-1-thread-3] INFO  com.intuit.karate.Runner - <<pass>> feature 3 of 10: classpath:Karate/Demo/features/getCall.feature
+10:42:00.846 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] response 1 --->  {
+  "data": {
+    "name": "test",
+    "id": 28,
+    "salary": 123,
+    "age": 23
+  },
+  "status": "success"
+}
+
+10:42:01.479 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] response 2 --->  {
+  "data": {
+    "profile_image": "",
+    "employee_name": "Tiger Nixon",
+    "employee_salary": "320800",
+    "id": "1",
+    "employee_age": "61"
+  },
+  "status": "success"
+}
+
+10:42:01.489 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 10: classpath:Karate/Demo/features/dataDrivenTest.feature
+11:07:42.204 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+11:07:42.311 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:07:42.403 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 11: classpath:Karate/Demo/features/callJavaFile.feature
+11:09:05.226 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+11:09:05.334 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:09:05.375 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Result -->  Hello World
+11:09:05.448 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 11: classpath:Karate/Demo/features/callJavaFile.feature
+11:10:42.445 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+11:10:42.556 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:10:42.588 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Result -->  Hello World
+11:10:42.664 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 11: classpath:Karate/Demo/features/callJavaFile.feature
+11:12:18.062 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+11:12:18.168 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:12:18.196 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Result -->  Hello World
+11:12:18.269 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 11: classpath:Karate/Demo/features/callJavaFile.feature
+11:17:43.529 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+11:17:43.629 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:17:43.731 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 11: classpath:Karate/Demo/features/callJavaFile.feature
+11:18:21.376 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+11:18:21.474 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:18:21.563 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 11: classpath:Karate/Demo/features/callJavaFile.feature
+11:19:57.588 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+11:19:57.684 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:19:57.778 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 11: classpath:Karate/Demo/features/callJavaFile.feature
+11:21:27.767 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+11:21:27.864 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:21:27.959 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 11: classpath:Karate/Demo/features/callJavaFile.feature
+11:25:28.728 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+11:25:28.907 [ForkJoinPool-1-worker-2] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:25:28.907 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:25:30.077 [ForkJoinPool-1-worker-2] INFO  com.intuit.karate - [print] returnedData1 -->  Hello
+11:25:30.086 [ForkJoinPool-1-worker-2] INFO  com.intuit.karate - [print] returnedData2 -->  myData
+11:25:30.095 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] data -->  [
+  {
+    "last_name": "Lawson",
+    "id": 7,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+    "first_name": "Michael",
+    "email": "michael.lawson@reqres.in"
+  },
+  {
+    "last_name": "Ferguson",
+    "id": 8,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+    "first_name": "Lindsay",
+    "email": "lindsay.ferguson@reqres.in"
+  },
+  {
+    "last_name": "Funke",
+    "id": 9,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+    "first_name": "Tobias",
+    "email": "tobias.funke@reqres.in"
+  },
+  {
+    "last_name": "Fields",
+    "id": 10,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+    "first_name": "Byron",
+    "email": "byron.fields@reqres.in"
+  },
+  {
+    "last_name": "Edwards",
+    "id": 11,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+    "first_name": "George",
+    "email": "george.edwards@reqres.in"
+  },
+  {
+    "last_name": "Howell",
+    "id": 12,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+    "first_name": "Rachel",
+    "email": "rachel.howell@reqres.in"
+  }
+]
+
+11:25:30.163 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 11: classpath:Karate/Demo/features/callJavaFile.feature
+11:26:21.055 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+11:26:21.151 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:26:22.079 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] data -->  [
+  {
+    "last_name": "Lawson",
+    "id": 7,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+    "first_name": "Michael",
+    "email": "michael.lawson@reqres.in"
+  },
+  {
+    "last_name": "Ferguson",
+    "id": 8,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+    "first_name": "Lindsay",
+    "email": "lindsay.ferguson@reqres.in"
+  },
+  {
+    "last_name": "Funke",
+    "id": 9,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+    "first_name": "Tobias",
+    "email": "tobias.funke@reqres.in"
+  },
+  {
+    "last_name": "Fields",
+    "id": 10,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+    "first_name": "Byron",
+    "email": "byron.fields@reqres.in"
+  },
+  {
+    "last_name": "Edwards",
+    "id": 11,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+    "first_name": "George",
+    "email": "george.edwards@reqres.in"
+  },
+  {
+    "last_name": "Howell",
+    "id": 12,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+    "first_name": "Rachel",
+    "email": "rachel.howell@reqres.in"
+  }
+]
+
+11:26:22.160 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 11: classpath:Karate/Demo/features/callJavaFile.feature
+11:32:30.479 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+11:32:30.580 [ForkJoinPool-1-worker-1] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:32:30.581 [ForkJoinPool-1-worker-2] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+11:32:30.608 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] Result -->  Hello World
+11:32:31.566 [ForkJoinPool-1-worker-2] INFO  com.intuit.karate - [print] data -->  [
+  {
+    "last_name": "Lawson",
+    "id": 7,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+    "first_name": "Michael",
+    "email": "michael.lawson@reqres.in"
+  },
+  {
+    "last_name": "Ferguson",
+    "id": 8,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+    "first_name": "Lindsay",
+    "email": "lindsay.ferguson@reqres.in"
+  },
+  {
+    "last_name": "Funke",
+    "id": 9,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+    "first_name": "Tobias",
+    "email": "tobias.funke@reqres.in"
+  },
+  {
+    "last_name": "Fields",
+    "id": 10,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+    "first_name": "Byron",
+    "email": "byron.fields@reqres.in"
+  },
+  {
+    "last_name": "Edwards",
+    "id": 11,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+    "first_name": "George",
+    "email": "george.edwards@reqres.in"
+  },
+  {
+    "last_name": "Howell",
+    "id": 12,
+    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+    "first_name": "Rachel",
+    "email": "rachel.howell@reqres.in"
+  }
+]
+
+11:32:31.644 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 11: classpath:Karate/Demo/features/callJavaFile.feature
+14:34:49.432 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:34:50.522 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "ad": {
+    "company": "StatusCode Weekly",
+    "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.",
+    "url": "http://statuscode.org/"
+  },
+  "data": [
+    {
+      "last_name": "Lawson",
+      "id": 7,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+      "first_name": "Michael",
+      "email": "michael.lawson@reqres.in"
+    },
+    {
+      "last_name": "Ferguson",
+      "id": 8,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+      "first_name": "Lindsay",
+      "email": "lindsay.ferguson@reqres.in"
+    },
+    {
+      "last_name": "Funke",
+      "id": 9,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+      "first_name": "Tobias",
+      "email": "tobias.funke@reqres.in"
+    },
+    {
+      "last_name": "Fields",
+      "id": 10,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+      "first_name": "Byron",
+      "email": "byron.fields@reqres.in"
+    },
+    {
+      "last_name": "Edwards",
+      "id": 11,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+      "first_name": "George",
+      "email": "george.edwards@reqres.in"
+    },
+    {
+      "last_name": "Howell",
+      "id": 12,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+      "first_name": "Rachel",
+      "email": "rachel.howell@reqres.in"
+    }
+  ],
+  "page": 2,
+  "total_pages": 2
+}
+
+14:34:50.525 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - assertion failed: path: $, actual: {"per_page":6,"total":12,"ad":{"company":"StatusCode Weekly","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.","url":"http:\/\/statuscode.org\/"},"data":[{"last_name":"Lawson","id":7,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/follettkyle\/128.jpg","first_name":"Michael","email":"michael.lawson@reqres.in"},{"last_name":"Ferguson","id":8,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/araa3185\/128.jpg","first_name":"Lindsay","email":"lindsay.ferguson@reqres.in"},{"last_name":"Funke","id":9,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/vivekprvr\/128.jpg","first_name":"Tobias","email":"tobias.funke@reqres.in"},{"last_name":"Fields","id":10,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/russoedu\/128.jpg","first_name":"Byron","email":"byron.fields@reqres.in"},{"last_name":"Edwards","id":11,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/mrmoiree\/128.jpg","first_name":"George","email":"george.edwards@reqres.in"},{"last_name":"Howell","id":12,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/hebertialmeida\/128.jpg","first_name":"Rachel","email":"rachel.howell@reqres.in"}],"page":2,"total_pages":2}, expected: {ad={company=StatusCode Weekly, text=A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things., url=http://statuscode.org/}, data={last_name=Weaver, id=2, avatar=https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg, first_name=Janet, email=janet.weaver@reqres.in}}, reason: actual value has 4 more key(s) than expected: {per_page=6, total=12, page=2, total_pages=2}
+14:34:50.561 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<fail>> feature 2 of 12: classpath:Karate/Demo/features/config.feature
+14:35:32.489 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:35:33.550 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "ad": {
+    "company": "StatusCode Weekly",
+    "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.",
+    "url": "http://statuscode.org/"
+  },
+  "data": [
+    {
+      "last_name": "Lawson",
+      "id": 7,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+      "first_name": "Michael",
+      "email": "michael.lawson@reqres.in"
+    },
+    {
+      "last_name": "Ferguson",
+      "id": 8,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+      "first_name": "Lindsay",
+      "email": "lindsay.ferguson@reqres.in"
+    },
+    {
+      "last_name": "Funke",
+      "id": 9,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+      "first_name": "Tobias",
+      "email": "tobias.funke@reqres.in"
+    },
+    {
+      "last_name": "Fields",
+      "id": 10,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+      "first_name": "Byron",
+      "email": "byron.fields@reqres.in"
+    },
+    {
+      "last_name": "Edwards",
+      "id": 11,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+      "first_name": "George",
+      "email": "george.edwards@reqres.in"
+    },
+    {
+      "last_name": "Howell",
+      "id": 12,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+      "first_name": "Rachel",
+      "email": "rachel.howell@reqres.in"
+    }
+  ],
+  "page": 2,
+  "total_pages": 2
+}
+
+14:35:33.553 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - assertion failed: path: $, actual: {"per_page":6,"total":12,"ad":{"company":"StatusCode Weekly","text":"A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.","url":"http:\/\/statuscode.org\/"},"data":[{"last_name":"Lawson","id":7,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/follettkyle\/128.jpg","first_name":"Michael","email":"michael.lawson@reqres.in"},{"last_name":"Ferguson","id":8,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/araa3185\/128.jpg","first_name":"Lindsay","email":"lindsay.ferguson@reqres.in"},{"last_name":"Funke","id":9,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/vivekprvr\/128.jpg","first_name":"Tobias","email":"tobias.funke@reqres.in"},{"last_name":"Fields","id":10,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/russoedu\/128.jpg","first_name":"Byron","email":"byron.fields@reqres.in"},{"last_name":"Edwards","id":11,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/mrmoiree\/128.jpg","first_name":"George","email":"george.edwards@reqres.in"},{"last_name":"Howell","id":12,"avatar":"https:\/\/s3.amazonaws.com\/uifaces\/faces\/twitter\/hebertialmeida\/128.jpg","first_name":"Rachel","email":"rachel.howell@reqres.in"}],"page":2,"total_pages":2}, expected: {ad={company=StatusCode Weekly, text=A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things., url=http://statuscode.org/}, data={last_name=Wong, id=3, avatar=https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg, first_name=Emma, email=emma.wong@reqres.in}}, reason: actual value has 4 more key(s) than expected: {per_page=6, total=12, page=2, total_pages=2}
+14:35:33.590 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<fail>> feature 2 of 12: classpath:Karate/Demo/features/config.feature
+14:36:05.159 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:36:06.200 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "ad": {
+    "company": "StatusCode Weekly",
+    "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.",
+    "url": "http://statuscode.org/"
+  },
+  "data": [
+    {
+      "last_name": "Lawson",
+      "id": 7,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+      "first_name": "Michael",
+      "email": "michael.lawson@reqres.in"
+    },
+    {
+      "last_name": "Ferguson",
+      "id": 8,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+      "first_name": "Lindsay",
+      "email": "lindsay.ferguson@reqres.in"
+    },
+    {
+      "last_name": "Funke",
+      "id": 9,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+      "first_name": "Tobias",
+      "email": "tobias.funke@reqres.in"
+    },
+    {
+      "last_name": "Fields",
+      "id": 10,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+      "first_name": "Byron",
+      "email": "byron.fields@reqres.in"
+    },
+    {
+      "last_name": "Edwards",
+      "id": 11,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+      "first_name": "George",
+      "email": "george.edwards@reqres.in"
+    },
+    {
+      "last_name": "Howell",
+      "id": 12,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+      "first_name": "Rachel",
+      "email": "rachel.howell@reqres.in"
+    }
+  ],
+  "page": 2,
+  "total_pages": 2
+}
+
+14:36:06.204 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] abc -->  test
+14:36:06.237 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<pass>> feature 2 of 12: classpath:Karate/Demo/features/config.feature
+14:37:45.330 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:37:46.396 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "ad": {
+    "company": "StatusCode Weekly",
+    "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.",
+    "url": "http://statuscode.org/"
+  },
+  "data": [
+    {
+      "last_name": "Lawson",
+      "id": 7,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+      "first_name": "Michael",
+      "email": "michael.lawson@reqres.in"
+    },
+    {
+      "last_name": "Ferguson",
+      "id": 8,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+      "first_name": "Lindsay",
+      "email": "lindsay.ferguson@reqres.in"
+    },
+    {
+      "last_name": "Funke",
+      "id": 9,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+      "first_name": "Tobias",
+      "email": "tobias.funke@reqres.in"
+    },
+    {
+      "last_name": "Fields",
+      "id": 10,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+      "first_name": "Byron",
+      "email": "byron.fields@reqres.in"
+    },
+    {
+      "last_name": "Edwards",
+      "id": 11,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+      "first_name": "George",
+      "email": "george.edwards@reqres.in"
+    },
+    {
+      "last_name": "Howell",
+      "id": 12,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+      "first_name": "Rachel",
+      "email": "rachel.howell@reqres.in"
+    }
+  ],
+  "page": 2,
+  "total_pages": 2
+}
+
+14:37:46.404 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] abc --> 
+14:37:46.439 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<pass>> feature 2 of 12: classpath:Karate/Demo/features/config.feature
+14:38:32.275 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:38:33.330 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "ad": {
+    "company": "StatusCode Weekly",
+    "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.",
+    "url": "http://statuscode.org/"
+  },
+  "data": [
+    {
+      "last_name": "Lawson",
+      "id": 7,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+      "first_name": "Michael",
+      "email": "michael.lawson@reqres.in"
+    },
+    {
+      "last_name": "Ferguson",
+      "id": 8,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+      "first_name": "Lindsay",
+      "email": "lindsay.ferguson@reqres.in"
+    },
+    {
+      "last_name": "Funke",
+      "id": 9,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+      "first_name": "Tobias",
+      "email": "tobias.funke@reqres.in"
+    },
+    {
+      "last_name": "Fields",
+      "id": 10,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+      "first_name": "Byron",
+      "email": "byron.fields@reqres.in"
+    },
+    {
+      "last_name": "Edwards",
+      "id": 11,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+      "first_name": "George",
+      "email": "george.edwards@reqres.in"
+    },
+    {
+      "last_name": "Howell",
+      "id": 12,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+      "first_name": "Rachel",
+      "email": "rachel.howell@reqres.in"
+    }
+  ],
+  "page": 2,
+  "total_pages": 2
+}
+
+14:38:33.335 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] url -->  https://reqres.in/api/users?page=2
+14:38:33.370 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<pass>> feature 2 of 12: classpath:Karate/Demo/features/config.feature
+14:41:31.127 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:41:31.256 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Environment variable value is -->  qa 
+14:41:32.301 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "ad": {
+    "company": "StatusCode Weekly",
+    "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.",
+    "url": "http://statuscode.org/"
+  },
+  "data": [
+    {
+      "last_name": "Lawson",
+      "id": 7,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+      "first_name": "Michael",
+      "email": "michael.lawson@reqres.in"
+    },
+    {
+      "last_name": "Ferguson",
+      "id": 8,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+      "first_name": "Lindsay",
+      "email": "lindsay.ferguson@reqres.in"
+    },
+    {
+      "last_name": "Funke",
+      "id": 9,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+      "first_name": "Tobias",
+      "email": "tobias.funke@reqres.in"
+    },
+    {
+      "last_name": "Fields",
+      "id": 10,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+      "first_name": "Byron",
+      "email": "byron.fields@reqres.in"
+    },
+    {
+      "last_name": "Edwards",
+      "id": 11,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+      "first_name": "George",
+      "email": "george.edwards@reqres.in"
+    },
+    {
+      "last_name": "Howell",
+      "id": 12,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+      "first_name": "Rachel",
+      "email": "rachel.howell@reqres.in"
+    }
+  ],
+  "page": 2,
+  "total_pages": 2
+}
+
+14:41:32.303 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] url -->  https://reqres.in/api/users?page=2
+14:41:32.354 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<pass>> feature 2 of 12: classpath:Karate/Demo/features/config.feature
+14:44:40.598 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:44:40.721 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - evaluation of 'karate-config.js' failed: javascript evaluation failed: read('classpath:karate-config.js'), javascript evaluation failed: function() {
+	
+	var config = {
+		url : 'https://reqres.in/api/users?page=2'
+	}
+	
+	var env = karate.env
+	karate.log("Environment variable value is --> ",env)
+	
+	if(env == 'qa') {
+		config.url : 'https://reqres.in/api/users?page=2';
+	}
+	return config;
+}, <eval>:11:13 Expected ; but found :
+		config.url : 'https://reqres.in/api/users?page=2';
+		           ^ in <eval> at line number 11 at column number 13
+14:44:40.810 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<fail>> feature 2 of 12: classpath:Karate/Demo/features/config.feature
+14:46:08.285 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:46:08.455 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Environment variable value is -->  qa 
+14:46:09.417 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - java.net.UnknownHostException: qa.in, http call failed after 48 milliseconds for URL: https://qa.in/api/users?page=2
+14:46:09.418 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - http request failed: 
+java.net.UnknownHostException: qa.in
+14:46:09.475 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<fail>> feature 2 of 12: classpath:Karate/Demo/features/config.feature
+14:47:19.344 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:47:19.477 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Environment variable value is -->  qa 
+14:47:20.561 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "ad": {
+    "company": "StatusCode Weekly",
+    "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.",
+    "url": "http://statuscode.org/"
+  },
+  "data": [
+    {
+      "last_name": "Lawson",
+      "id": 7,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+      "first_name": "Michael",
+      "email": "michael.lawson@reqres.in"
+    },
+    {
+      "last_name": "Ferguson",
+      "id": 8,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+      "first_name": "Lindsay",
+      "email": "lindsay.ferguson@reqres.in"
+    },
+    {
+      "last_name": "Funke",
+      "id": 9,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+      "first_name": "Tobias",
+      "email": "tobias.funke@reqres.in"
+    },
+    {
+      "last_name": "Fields",
+      "id": 10,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+      "first_name": "Byron",
+      "email": "byron.fields@reqres.in"
+    },
+    {
+      "last_name": "Edwards",
+      "id": 11,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+      "first_name": "George",
+      "email": "george.edwards@reqres.in"
+    },
+    {
+      "last_name": "Howell",
+      "id": 12,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+      "first_name": "Rachel",
+      "email": "rachel.howell@reqres.in"
+    }
+  ],
+  "page": 2,
+  "total_pages": 2
+}
+
+14:47:20.564 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] url -->  https://reqres.in/api/users?page=2
+14:47:20.619 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<pass>> feature 2 of 12: classpath:Karate/Demo/features/config.feature
+14:49:07.276 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:49:07.410 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Environment variable value is -->   
+14:49:08.264 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - java.net.UnknownHostException: some-host.in, http call failed after 68 milliseconds for URL: https://some-host.in/api/users?page=2
+14:49:08.264 [ForkJoinPool-1-worker-1] ERROR com.intuit.karate - http request failed: 
+java.net.UnknownHostException: some-host.in
+14:49:08.315 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<fail>> feature 2 of 12: classpath:Karate/Demo/features/config.feature
+14:50:00.507 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:50:00.637 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Environment variable value is -->   
+14:50:01.789 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "ad": {
+    "company": "StatusCode Weekly",
+    "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.",
+    "url": "http://statuscode.org/"
+  },
+  "data": [
+    {
+      "last_name": "Lawson",
+      "id": 7,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+      "first_name": "Michael",
+      "email": "michael.lawson@reqres.in"
+    },
+    {
+      "last_name": "Ferguson",
+      "id": 8,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+      "first_name": "Lindsay",
+      "email": "lindsay.ferguson@reqres.in"
+    },
+    {
+      "last_name": "Funke",
+      "id": 9,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+      "first_name": "Tobias",
+      "email": "tobias.funke@reqres.in"
+    },
+    {
+      "last_name": "Fields",
+      "id": 10,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+      "first_name": "Byron",
+      "email": "byron.fields@reqres.in"
+    },
+    {
+      "last_name": "Edwards",
+      "id": 11,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+      "first_name": "George",
+      "email": "george.edwards@reqres.in"
+    },
+    {
+      "last_name": "Howell",
+      "id": 12,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+      "first_name": "Rachel",
+      "email": "rachel.howell@reqres.in"
+    }
+  ],
+  "page": 2,
+  "total_pages": 2
+}
+
+14:50:01.792 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] url -->  https://reqres.in/api/users?page=2
+14:50:01.884 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<pass>> feature 2 of 12: classpath:Karate/Demo/features/config.feature
+14:56:19.892 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+14:56:20.017 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - Environment variable value is -->  qa 
+14:56:21.216 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "per_page": 6,
+  "total": 12,
+  "ad": {
+    "company": "StatusCode Weekly",
+    "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things.",
+    "url": "http://statuscode.org/"
+  },
+  "data": [
+    {
+      "last_name": "Lawson",
+      "id": 7,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg",
+      "first_name": "Michael",
+      "email": "michael.lawson@reqres.in"
+    },
+    {
+      "last_name": "Ferguson",
+      "id": 8,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/araa3185/128.jpg",
+      "first_name": "Lindsay",
+      "email": "lindsay.ferguson@reqres.in"
+    },
+    {
+      "last_name": "Funke",
+      "id": 9,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vivekprvr/128.jpg",
+      "first_name": "Tobias",
+      "email": "tobias.funke@reqres.in"
+    },
+    {
+      "last_name": "Fields",
+      "id": 10,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/russoedu/128.jpg",
+      "first_name": "Byron",
+      "email": "byron.fields@reqres.in"
+    },
+    {
+      "last_name": "Edwards",
+      "id": 11,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg",
+      "first_name": "George",
+      "email": "george.edwards@reqres.in"
+    },
+    {
+      "last_name": "Howell",
+      "id": 12,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/hebertialmeida/128.jpg",
+      "first_name": "Rachel",
+      "email": "rachel.howell@reqres.in"
+    }
+  ],
+  "page": 2,
+  "total_pages": 2
+}
+
+14:56:21.219 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] url -->  https://reqres.in/api/users?page=2
+14:56:21.260 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<pass>> feature 2 of 12: classpath:Karate/Demo/features/config.feature

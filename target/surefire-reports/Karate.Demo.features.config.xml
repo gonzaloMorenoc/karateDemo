@@ -1,0 +1,10 @@
+<testsuite failures="0" name="Karate/Demo/features/config.feature" skipped="0" tests="1" time="1.131106">
+  <testcase classname="Karate.Demo.features.config" name="request user 2 details" time="1.131106">
+    <system-out>* def expectedOutput = read('../data/result2.json') ....................... passed
+Given url url ............................................................. passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+Then print response ....................................................... passed
+Then print 'url --&gt; ',url ................................................. passed</system-out>
+  </testcase>
+</testsuite>

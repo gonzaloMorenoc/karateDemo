@@ -1,0 +1,16 @@
+<testsuite failures="0" name="Karate/Demo/features/dataDrivenTest.feature" skipped="0" tests="1" time="2.111248">
+  <testcase classname="Karate.Demo.features.dataDrivenTest" name="create user details" time="2.111248">
+    <system-out>* url 'http://dummy.restapiexample.com/' .................................. passed
+Given path 'api/v1/create' ................................................ passed
+And request {"name":test,"salary":123,"age":23} ........................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+Then print 'response 1 ---&gt; ',response .................................... passed
+* def result = '1' ........................................................ passed
+Given path 'api/v1/employee/' + result .................................... passed
+And method GET ............................................................ passed
+Then status 200 ........................................................... passed
+Then print 'response 2 ---&gt; ',response .................................... passed
+And match response.data contains {id: '#(result)'} ........................ passed</system-out>
+  </testcase>
+</testsuite>
