@@ -1,21 +1,29 @@
 function fn() {
-	
-	var config = {
-		url : 'https://some-host.in/api/users?page=2'
-	}
-	
-	var env = karate.env
-	karate.log("Environment variable value is --> ",env)
-	
-	if(env == 'qa') {
-		config.url = 'https://reqres.in/api/users?page=2';
-	}
-	else if(env == 'dev'){
-		config.url = 'https://dev.in/api/users?page=2';
-	} 
-	else {
-		config.url = 'https://reqres.in/api/users?page=2';
-	}
-	
-	return config;
+    const env = karate.env;
+    karate.log('Current environment:', env);
+    
+    const config = {
+        baseUrl: 'https://reqres.in/api',
+        timeout: 30000,
+        retry: { count: 3, interval: 1000 }
+    };
+    
+    if (env === 'dev') {
+        config.baseUrl = 'https://dev-api.reqres.in/api';
+    } else if (env === 'qa') {
+        config.baseUrl = 'https://qa-api.reqres.in/api';
+    } else if (env === 'prod') {
+        config.baseUrl = 'https://reqres.in/api';
+    }
+    
+    config.commonHeaders = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    };
+    
+    karate.configure('connectTimeout', config.timeout);
+    karate.configure('readTimeout', config.timeout);
+    karate.configure('retry', config.retry);
+    
+    return config;
 }

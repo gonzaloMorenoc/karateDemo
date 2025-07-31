@@ -1,34 +1,45 @@
-# Karate Framework Demo
+# Karate DSL Demo Framework
 
-Proyecto de demostración para automatización de pruebas API utilizando Karate Framework.
+[![Karate](https://img.shields.io/badge/Karate-1.4.1-blue.svg)](https://github.com/karatelabs/karate)
+[![Java](https://img.shields.io/badge/Java-11+-orange.svg)](https://www.oracle.com/java/)
+[![Maven](https://img.shields.io/badge/Maven-3.8+-red.svg)](https://maven.apache.org/)
+[![JUnit](https://img.shields.io/badge/JUnit-5.10.1-green.svg)](https://junit.org/junit5/)
 
-## Descripción
+Proyecto de referencia para automatización de pruebas API utilizando Karate DSL con las mejores prácticas y patrones modernos.
 
-Este proyecto contiene ejemplos de automatización de pruebas API con Karate Framework, incluyendo:
-- Pruebas GET y POST
-- Manejo de datos externos (CSV, JSON)
-- Autenticación
-- Llamadas a funciones Java
-- Pruebas parametrizadas
-- Generación de reportes
+## Características Principales
 
-## Prerrequisitos
+- **API Testing completo**: GET, POST, PUT, DELETE con validaciones
+- **Data-Driven Testing**: Usando CSV y JSON externos
+- **Parallel Execution**: Ejecución en paralelo para mejor rendimiento  
+- **Environment Management**: Configuración multi-entorno (dev, qa, prod)
+- **Java Integration**: Integración con clases Java personalizadas
+- **Modern Reporting**: Reportes HTML detallados
+- **Schema Validation**: Validación de esquemas JSON
+- **Error Handling**: Manejo robusto de errores y excepciones
 
-- Java 8 o superior
-- Maven 3.6+
-- IDE compatible con Maven (Eclipse, IntelliJ IDEA, VS Code)
+## Requisitos Previos
 
-## Instalación
+- **Java 11** o superior
+- **Maven 3.8+**
+- IDE compatible (IntelliJ IDEA, Eclipse, VS Code)
 
-1. Clonar el repositorio:
+## Instalación y Configuración
+
+### Clonar el Repositorio
 ```bash
-git clone <url-del-repositorio>
-cd karateDemo
+git clone <repository-url>
+cd karate-demo-framework
 ```
 
-2. Instalar dependencias:
+### Instalar Dependencias
 ```bash
 mvn clean install
+```
+
+### Verificar Instalación
+```bash
+mvn test -Dtest=TestRunner
 ```
 
 ## Estructura del Proyecto
@@ -41,178 +52,242 @@ src/
 └── test/java/
     ├── Karate/Demo/
     │   ├── data/
-    │   │   ├── inputData.csv
-    │   │   ├── request1.json
-    │   │   ├── result.json
+    │   │   ├── inputData.csv          # Datos CSV para pruebas
+    │   │   ├── request1.json          # Payloads de request
+    │   │   ├── result.json            # Respuestas esperadas
     │   │   └── result2.json
     │   └── features/
-    │       ├── JavaFunctions.java
-    │       ├── TestRunner.java
-    │       ├── WriteData.java
-    │       ├── callJavaFile.feature
-    │       ├── config.feature
-    │       ├── dataDrivenTest.feature
-    │       ├── dataDrivenTest2.feature
-    │       ├── getCall.feature
-    │       ├── userDetails.feature
-    │       ├── userDetails2.feature
-    │       ├── userDetailsAuthentication.feature
-    │       ├── userDetailsAuthentication3.feature
-    │       ├── userDetailsAuthenticationTest2.feature
-    │       ├── userDetailsPostRequest.feature
-    │       └── webTesting.feature
-    ├── karate-config.js
-    └── logback-test.xml
+    │       ├── TestRunner.java        # Runner principal con JUnit 5
+    │       ├── JavaFunctions.java     # Funciones Java de utilidad
+    │       ├── WriteData.java         # Utilidades de escritura
+    │       ├── userDetails.feature    # Tests de usuarios
+    │       ├── dataDrivenTest.feature # Tests data-driven
+    │       ├── modernApiTests.feature # Patrones modernos de testing
+    │       └── callJavaFile.feature   # Integración Java-Karate
+    ├── karate-config.js               # Configuración global
+    └── logback-test.xml               # Configuración de logging
 ```
 
 ## Ejecución de Pruebas
 
-### Ejecutar todas las pruebas
+### Todos los Tests
 ```bash
 mvn test
 ```
 
-### Ejecutar pruebas específicas
+### Tests Específicos
 ```bash
-mvn test -Dtest=TestRunner
+mvn test -Dtest=TestRunner#testUsers
+mvn test -Dtest=TestRunner#testParallel
 ```
 
-### Ejecutar con diferentes entornos
+### Por Entorno
 ```bash
-mvn test -Dkarate.env=qa
 mvn test -Dkarate.env=dev
+mvn test -Dkarate.env=qa
+mvn test -Dkarate.env=prod
 ```
 
-### Ejecutar pruebas en paralelo
+### Ejecución Paralela
 ```bash
-mvn test -Dkarate.options="--threads 5"
+mvn test -Dtest=TestRunner#testParallel
 ```
 
-## Características Principales
+### Con Tags Específicos
+```bash
+mvn test -Dkarate.options="--tags @smoke"
+mvn test -Dkarate.options="--tags ~@ignore"
+```
 
-### Pruebas API
-- **GET Requests**: Ejemplos en `userDetails.feature`
-- **POST Requests**: Ejemplos en `userDetailsPostRequest.feature`
-- **Autenticación**: Ejemplos en `userDetailsAuthentication*.feature`
+## Configuración por Entornos
 
-### Manejo de Datos
-- **Datos externos**: Lectura de archivos CSV y JSON
-- **Datos parametrizados**: Uso de Examples en Scenario Outline
-- **Funciones JavaScript**: Definición inline de funciones
+El archivo `karate-config.js` maneja automáticamente diferentes entornos:
+
+```javascript
+// Desarrollo
+mvn test -Dkarate.env=dev
+
+// QA
+mvn test -Dkarate.env=qa
+
+// Producción  
+mvn test -Dkarate.env=prod
+```
+
+## Patrones de Testing Implementados
+
+### CRUD Completo
+```gherkin
+Scenario: Complete CRUD operations
+    Given path '/users'
+    When method GET
+    Then status 200
+    
+    Given request { "name": "John", "job": "Developer" }
+    When method POST
+    Then status 201
+    * def userId = response.id
+    
+    Given path '/users', userId
+    When method DELETE
+    Then status 204
+```
+
+### Data-Driven con CSV
+```gherkin
+Scenario Outline: Create user with external data
+    Given request { "name": "<n>", "salary": "<salary>" }
+    When method POST
+    Then status 201
+    
+    Examples:
+    | read('../data/inputData.csv') |
+```
+
+### Validación de Esquemas
+```gherkin
+Scenario: Schema validation
+    Given path '/users/2'
+    When method GET
+    Then status 200
+    And match response.data contains { id: 2, email: '#string' }
+```
 
 ### Integración con Java
-- **Funciones estáticas**: Llamadas desde features
-- **Instancias de clases**: Creación y uso de objetos Java
-- **Escritura de archivos**: Persistencia de datos
-
-### Configuración
-- **Múltiples entornos**: qa, dev, prod
-- **URLs dinámicas**: Configuración basada en entorno
-- **Logging**: Configuración con logback
-
-## Archivos de Configuración
-
-### karate-config.js
-Configuración global que se ejecuta antes de cada scenario:
-```javascript
-function fn() {
-    var config = {
-        url : 'https://some-host.in/api/users?page=2'
-    }
-    
-    var env = karate.env
-    karate.log("Environment variable value is --> ",env)
-    
-    if(env == 'qa') {
-        config.url = 'https://reqres.in/api/users?page=2';
-    }
-    else if(env == 'dev'){
-        config.url = 'https://dev.in/api/users?page=2';
-    } 
-    else {
-        config.url = 'https://reqres.in/api/users?page=2';
-    }
-    
-    return config;
-}
+```gherkin
+Scenario: Java integration
+    * def javaHelper = Java.type('Karate.Demo.features.JavaFunctions')
+    * def result = javaHelper.staticFunction("test")
+    And match result == 'Expected Value'
 ```
 
-### logback-test.xml
-Configuración de logging para pruebas con salida a consola y archivo.
+## Reportes y Logging
 
-## Generación de Reportes
+### Reportes HTML
+Los reportes se generan automáticamente en:
+```
+target/karate-reports/karate-summary.html
+```
 
-El proyecto incluye generación automática de reportes HTML usando cucumber-reporting:
-- Los reportes se generan en `target/cucumber-html-reports/`
-- Incluye estadísticas detalladas de ejecución
-- Soporte para múltiples formatos de salida
+### Logs Detallados
+```
+target/karate.log
+```
 
-## Funciones Utilitarias
+### Configuración de Logging
+Editar `src/test/java/logback-test.xml` para ajustar niveles de logging.
 
-### JavaFunctions.java
-Contiene funciones de ejemplo para integración Java-Karate:
-- `nonstaticfunctions()`: Función de instancia
-- `staticfun()`: Función estática
+## Mejores Prácticas Implementadas
 
-### WriteData.java
-Utilidad para escribir datos a archivos durante la ejecución de pruebas.
+### Organización de Archivos
+- Features separados por funcionalidad
+- Datos externos en carpeta `data/`
+- Funciones Java en el mismo package
 
-## Problemas Conocidos
+### Configuración Centralizada
+- `karate-config.js` para configuración global
+- Variables de entorno para diferentes ambientes
+- Headers comunes centralizados
 
-### Seguridad
-- **Log4j**: Versión vulnerable (2.13.3) - Actualizar a 2.17.0+
-- **Escritura de archivos**: Falta validación de rutas
+### Validaciones Robustas
+- Validación de status codes
+- Validación de esquemas JSON
+- Validación de tipos de datos
+- Validación de tiempo de respuesta
 
-### Compatibilidad
-- **Karate**: Versión 0.9.5 obsoleta - Actualizar a 1.2.0+
-- **Maven**: Plugins desactualizados
+### Manejo de Errores
+- Try-catch en funciones Java
+- Validación de respuestas de error
+- Logging detallado de fallos
 
-### Correcciones Pendientes
-- Error tipográfico en `userDetailsAuthentication.feature`
-- Manejo de excepciones en `WriteData.java`
-
-## Mejores Prácticas
-
-1. **Organización**: Separar features por funcionalidad
-2. **Datos**: Usar archivos externos para datos de prueba
-3. **Reutilización**: Crear funciones JavaScript reutilizables
-4. **Configuración**: Usar karate-config.js para configuración global
-5. **Paralelización**: Ejecutar pruebas en paralelo para mejor rendimiento
+### Paralelización
+- Ejecución paralela configurada
+- Tests independientes entre sí
+- Gestión de recursos compartidos
 
 ## Comandos Útiles
 
+### Desarrollo
 ```bash
-# Limpiar y compilar
+# Compilar sin ejecutar tests
 mvn clean compile
 
-# Ejecutar pruebas con tags específicos
+# Ejecutar solo tests que no están ignorados
 mvn test -Dkarate.options="--tags ~@ignore"
 
-# Ejecutar con logging detallado
-mvn test -Dkarate.options="--tags ~@ignore" -Dtest.loglevel=DEBUG
+# Debug mode con logging detallado
+mvn test -Dkarate.options="--tags @debug" -Dlogback.configurationFile=logback-debug.xml
 
-# Generar solo reportes
-mvn test -Dkarate.options="--tags ~@ignore --dry-run"
+# Dry run para validar sintaxis
+mvn test -Dkarate.options="--dry-run"
+```
+
+### CI/CD
+```bash
+# Para pipelines de integración continua
+mvn test -Dkarate.env=ci -Dkarate.options="--tags ~@manual"
+
+# Generar reportes en formato JUnit
+mvn test -Dkarate.options="--format junit:target/junit-reports"
+```
+
+## Troubleshooting
+
+### Problemas Comunes
+
+**Error de Timeout:**
+```bash
+# Aumentar timeout global
+mvn test -Dkarate.options="--timeout 60000"
+```
+
+**Problemas de Encoding:**
+```bash
+# Especificar encoding
+mvn test -Dfile.encoding=UTF-8
+```
+
+**Fallos de Conexión:**
+```bash
+# Verificar conectividad
+mvn test -Dkarate.env=local -Dkarate.options="--tags @health"
 ```
 
 ## Contribución
 
-1. Fork el proyecto
-2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abrir un Pull Request
+### Agregar Nuevos Tests
+1. Crear feature file en `src/test/java/Karate/Demo/features/`
+2. Agregar datos de prueba en `src/test/java/Karate/Demo/data/`
+3. Actualizar `TestRunner.java` si es necesario
+4. Ejecutar `mvn test` para validar
+
+### Estándares de Código
+- Usar nombres descriptivos en inglés
+- Seguir convenciones de Gherkin
+- Documentar funciones Java complejas
+- Mantener features independientes
+
+### Pull Requests
+1. Fork el repositorio
+2. Crear branch feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Commit cambios (`git commit -m 'Agregar nueva funcionalidad'`)
+4. Push al branch (`git push origin feature/nueva-funcionalidad`)
+5. Crear Pull Request
+
+## Recursos Adicionales
+
+- [Documentación Oficial de Karate](https://github.com/karatelabs/karate)
+- [Karate DSL Examples](https://github.com/karatelabs/karate/tree/master/examples)
+- [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/)
+- [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE.md para detalles.
+Este proyecto está licenciado bajo MIT License - ver [LICENSE.md](LICENSE.md) para detalles.
 
-## Contacto
+## Soporte
 
-Para preguntas o soporte, crear un issue en el repositorio.
-
-## Referencias
-
-- [Karate Framework Documentation](https://github.com/intuit/karate)
-- [Maven Documentation](https://maven.apache.org/guides/)
-- [Cucumber Reporting](https://github.com/damianszczepanik/cucumber-reporting)
+Para preguntas o problemas:
+- Crear un [Issue](../../issues) en GitHub
+- Consultar la [documentación oficial](https://github.com/karatelabs/karate)
+- Revisar [examples](https://github.com/karatelabs/karate/tree/master/examples) del repositorio oficial
