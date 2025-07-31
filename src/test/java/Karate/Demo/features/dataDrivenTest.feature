@@ -1,28 +1,28 @@
-@ignore
-Feature: data driven test
+Feature: Data Driven Tests
 
-	Background:
-	* url 'http://dummy.restapiexample.com/'
+Background:
+	* url 'https://reqres.in/api/users'
+
+Scenario Outline: Create and validate user
+	Given request { "name": "<n>", "job": "<job>" }
+	When method POST
+	Then status 201
+	And match response.name == '<n>'
+	And match response.job == '<job>'
+	And match response.id == '#string'
+	And match response.createdAt == '#string'
 	
-	Scenario Outline: create user details
-		Given path 'api/v1/create'
-		And request {"name":<name>,"salary":<salary>,"age":<age>}
-		When method POST
-		Then status 200
-		Then print 'response 1 ---> ',response
-		#* def result = response.data.id
-		* def result = '1'
-		
-		Given path 'api/v1/employee/' + result
-		And method GET
-		Then status 200
-		Then print 'response 2 ---> ',response
-		And match response.data contains {id: '#(result)'}
-		
-		
-		Examples:
-		|name|salary|age|
-		|test|123|23|
-		
-		
-		
+	Examples:
+		| name     | job        |
+		| John     | Developer  |
+		| Jane     | Tester     |
+		| Bob      | Manager    |
+
+Scenario Outline: Create user with CSV data
+	Given request { "name": "<n>", "salary": "<salary>", "age": "<age>" }
+	When method POST
+	Then status 201
+	And match response.name == '<n>'
+	
+	Examples:
+		| read('../data/inputData.csv') |
